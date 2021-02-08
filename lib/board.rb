@@ -44,9 +44,9 @@ attr_accessor:cells
     !taken?(user_input) && user_input.to_i.between?(1,9)
   end
 
-  def update(user_input, player = "X")
+  def update(user_input, player)
     index = user_input.to_i - 1
-    @cells[index] = player
+    @cells[index] = player.token
     #binding.pry 
   end
 
